@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark text-white min-h-screen overflow-hidden;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-900;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-purple-600 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-purple-500;
+  }
+}
+
+@layer components {
+  .neon-border {
+    box-shadow: 
+      0 0 5px theme('colors.neon.purple'),
+      0 0 10px theme('colors.neon.purple'),
+      0 0 15px theme('colors.neon.purple'),
+      0 0 20px theme('colors.neon.pink');
+  }
+  
+  .tool-btn {
+    @apply flex items-center justify-center p-3 rounded-lg bg-gray-800 hover:bg-gray-700 transition-all duration-300 border border-gray-700 hover:border-neon-purple cursor-pointer;
+  }
+  
+  .tool-btn.active {
+    @apply bg-purple-900 border-neon-purple shadow-lg;
+    box-shadow: 
+      0 0 5px theme('colors.neon.purple'),
+      0 0 10px theme('colors.neon.purple');
+  }
+  
+  .glass-panel {
+    @apply bg-gray-900/80 backdrop-blur-sm border border-gray-700/50 rounded-xl;
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "artworks": [
+    {
+      "id": "1",
+      "title": "Cosmic Dreams",
+      "creator": "DigitalArtist",
+      "price": "0.25 ETH",
+      "likes": 124,
+      "views": 1200,
+      "image": "/placeholder-art-1.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Neon Pulse",
+      "creator": "CyberCreator",
+      "price": "0.42 ETH",
+      "likes": 89,
+      "views": 950,
+      "image": "/placeholder-art-2.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Abstract Harmony",
+      "creator": "ArtVirtuoso",
+      "price": "0.18 ETH",
+      "likes": 210,
+      "views": 2100,
+      "image": "/placeholder-art-3.jpg"
+    }
+  ],
+  "effects": [
+    {
+      "id": "glow",
+      "name": "Glow Effect",
+      "icon": "Sun"
+    },
+    {
+      "id": "blur",
+      "name": "Blur Effect",
+      "icon": "Cloud"
+    },
+    {
+      "id": "pixelate",
+      "name": "Pixelate",
+      "icon": "Grid"
+    },
+    {
+      "id": "chromatic",
+      "name": "Chromatic",
+      "icon": "Zap"
+    },
+    {
+      "id": "noise",
+      "name": "Noise",
+      "icon": "Sparkles"
+    },
+    {
+      "id": "wave",
+      "name": "Wave Distortion",
+      "icon": "Waves"
+    }
+  ]
+}
