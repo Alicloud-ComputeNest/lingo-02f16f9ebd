@@ -1,30 +1,39 @@
 import React from 'react';
-import mockJson from './mock.json';
 import DigitalCanvas from './components/DigitalCanvas';
 import EffectTools from './components/EffectTools';
 import PublishManager from './components/PublishManager';
 
-const mockData = mockJson;
-
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white p-6">
-      <header className="mb-8 text-center">
-        <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
-          NFT Art Studio
-        </h1>
-        <p className="text-gray-400 mt-2">Create your digital masterpieces</p>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white">
+      <header className="border-b border-gray-800">
+        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+          <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500">
+            NFT Art Studio
+          </h1>
+          <nav>
+            <ul className="flex space-x-6">
+              <li className="hover:text-cyan-400 transition-colors cursor-pointer">Dashboard</li>
+              <li className="hover:text-cyan-400 transition-colors cursor-pointer">Marketplace</li>
+              <li className="hover:text-cyan-400 transition-colors cursor-pointer">Profile</li>
+            </ul>
+          </nav>
+        </div>
       </header>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div className="lg:col-span-2">
-          <DigitalCanvas />
+      <main className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="lg:col-span-2">
+            <DigitalCanvas />
+          </div>
+          <div>
+            <EffectTools />
+            <div className="mt-8">
+              <PublishManager />
+            </div>
+          </div>
         </div>
-        <div className="space-y-6">
-          <EffectTools effects={mockData.effects} />
-          <PublishManager artworks={mockData.artworks} />
-        </div>
-      </div>
+      </main>
     </div>
   );
 }
